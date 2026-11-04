@@ -1,0 +1,65 @@
+========================================================================
+PANDUAN APLIKASI BUKU INDUK & LEGER SISWA PORTABLE (WINDOWS)
+========================================================================
+
+Aplikasi ini sudah dirancang 100% portable tanpa memerlukan instalasi
+XAMPP, Laragon, Composer, maupun PHP di komputer Windows pengguna.
+
+------------------------------------------------------------------------
+STRUKTUR FOLDER PORTABEL DI WINDOWS
+------------------------------------------------------------------------
+
+Folder Utama (misal: "BukuInduk-Portable" di Flashdisk / Harddisk):
+├── app/                  <-- Seluruh file proyek Laravel ini (pd-gama)
+│   ├── app/
+│   ├── bootstrap/
+│   ├── config/
+│   ├── database/
+│   │   └── database.sqlite (Database mandiri)
+│   ├── public/
+│   ├── resources/
+│   ├── routes/
+│   ├── storage/
+│   ├── vendor/
+│   ├── .env
+│   └── artisan
+├── php/                  <-- Folder PHP 8.3 x64 Windows (sudah kami unduhkan)
+│   ├── php.exe
+│   ├── php.ini           (sudah aktif: pdo_sqlite, sqlite3, curl, mbstring, dll)
+│   └── ext/
+├── JALANKAN_APLIKASI.bat <-- KLIK 2x UNTUK MENJALANKAN APLIKASI
+├── HENTIKAN_APLIKASI.bat <-- KLIK 2x UNTUK MENGHENTIKAN APLIKASI
+├── RESET_DATABASE.bat    <-- Opsi jika ingin reset data ke awal
+└── BUKA_TERMINAL_ARTISAN.bat <-- Terminal artisan mandiri (opsional)
+
+------------------------------------------------------------------------
+CARA PENGGUNAAN DI WINDOWS:
+------------------------------------------------------------------------
+1. Copy folder utama (yang berisi folder 'app', 'php', dan file .bat)
+   ke komputer Windows manapun atau flashdisk.
+
+2. Klik dua kali (double click) pada file:
+   --> JALANKAN_APLIKASI.bat
+
+3. Sistem akan otomatis:
+   - Menghubungkan PHP 8.3 portable dengan aplikasi
+   - Menyiapkan database SQLite jika belum ada
+   - Menjalankan server lokal
+   - Membuka browser langsung ke alamat: http://127.0.0.1:8000
+
+4. Login Akun Administrator:
+   Email    : admin@sekolah.sch.id
+   Password : password
+
+5. Jika selesai menggunakan aplikasi:
+   Tutup jendela CMD atau klik 2x file "HENTIKAN_APLIKASI.bat".
+
+------------------------------------------------------------------------
+CATATAN DATABASE SQLITE:
+------------------------------------------------------------------------
+Seluruh data tersimpan otomatis di dalam file:
+  app/database/database.sqlite
+
+Jika ingin membackup data siswa, Anda cukup menyalin file 
+"database.sqlite" tersebut. Sangat aman dan mudah dipindahkan!
+========================================================================
